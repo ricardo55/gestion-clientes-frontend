@@ -58,7 +58,7 @@ export class ListaClientesComponent implements OnInit {
     }
 
 
-  verDetallesDelEmpleado(id:number){
-    this.router.navigate(['empleado-detalles',id]);
+  verDetallesDelCliente(id:number){
+    this.router.navigate(['cliente-detalles',id]);
   }
 }

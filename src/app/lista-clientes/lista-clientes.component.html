@@ -11,10 +11,10 @@
   </thead>
   <tbody>
     <tr *ngFor= "let cliente of clientes">
-      <td>{{empleado.nombre}}</td>
-      <td>{{empleado.apellido}}</td>
-      <td>{{empleado.email}}</td>
-      <td>{{empleado.fecha}}</td>
+      <td>{{cliente.nombre}}</td>
+      <td>{{cliente.apellido}}</td>
+      <td>{{cliente.email}}</td>
+      <td>{{cliente.fechaIngreso}}</td>
       <td>
         <button (click)= "actualizarCliente(cliente.id)" class="btn btn-info">Editar</button>
         <button (click)= "eliminarCliente(cliente.id)" class="btn btn-danger" style="margin-left : 10px;">Eliminar</button>

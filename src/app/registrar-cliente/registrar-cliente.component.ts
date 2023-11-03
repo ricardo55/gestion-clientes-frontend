@@ -18,7 +18,7 @@ export class RegistrarClienteComponent implements OnInit {
   }
 
   guardarCliente(){
-    this.clienteServicio.registrarEmpleado(this.cliente).subscribe(dato => {
+    this.clienteServicio.registrarCliente(this.cliente).subscribe(dato => {
       console.log(dato);
       this.irALaListaDeClientes();
     },error => console.log(error));

@@ -1,12 +1,12 @@
 <div class="col-md-6 offset-md-3">
   <h3 class="text-center">Registro de empleado</h3>
-  <form (ngSubmit)= "onSubmit()" #empleadoForm = "ngForm">
+  <form (ngSubmit)= "onSubmit()" #clienteForm = "ngForm">
     <div class="form-group">
       <label>Nombre : </label>
       <input type = "text"
       class="form-control"
       id = "nombre"
-      [(ngModel)] = "empleado.nombre"
+      [(ngModel)] = "cliente.nombre"
       name = "nombre"
       required
       minlength="4"
@@ -32,7 +32,7 @@
       <input type = "text"
       class="form-control"
       id = "apellido"
-      [(ngModel)] = "empleado.apellido"
+      [(ngModel)] = "cliente.apellido"
       name = "apellido"
       required
       minlength="4"
@@ -57,7 +57,7 @@
       <input type = "email"
       class="form-control"
       id = "email"
-      [(ngModel)] = "empleado.email"
+      [(ngModel)] = "cliente.email"
       name = "email"
       pattern ="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
       required
@@ -74,6 +74,20 @@
       </div>
     </div>
 
-    <button class="btn btn-success" [disabled]= "!empleadoForm.form.valid">Guardar</button>
+    <div class="form-group">
+      <label>Fecha : </label>
+      <input type = "date"
+      class="form-control"
+      id = "fecha"
+      [(ngModel)] = "cliente.fechaIngreso"
+      name = "fecha"
+      required
+      placeholder="Ponga su fecha "
+      #fecha = "ngModel"
+      >
+     
+    </div>
+
+    <button class="btn btn-success" [disabled]= "!clienteForm.form.valid">Guardar</button>
   </form>
 </div>
